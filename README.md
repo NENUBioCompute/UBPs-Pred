@@ -1,4 +1,4 @@
-# UBPs-Pred
+# Description
 ---
 ## Abstract
   Ubiquinone is an important cofactor that plays vital and diverse roles in many biological processes. Ubiquinone-binding proteins (UBPs) are receptor proteins that are docking with ubiquinones. Analyzing and identifying UBPs by computational approach will provide insights into the pathway associated with ubiquinones. In this work, we firstly proposed an UBPs predictor (UBPs-Pred), the optimal feature subset selected from three categories of sequence-derived features was fed into the extreme gradient boosting (XGBoost) classifier, and the parameter of the XGBoost was tuned by multi-objective particle swarm optimization (MOPSO). The experimental results over the independent validation demonstrated the considerable prediction performance with the Matthews correlation coefficient (MCC) of 0.517. 
