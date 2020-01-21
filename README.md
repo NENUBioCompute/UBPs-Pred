@@ -18,7 +18,7 @@ Download and Install BLAST+
 **Step 3:** We used the swissprot data set. release the data set to the relative paths ./blast/db/ ,download the data set from:
 
         ftp://ftp.ncbi.nlm.nih.gov/blast/db/
-## Prepare protein sequences in fasta format
+## Get sequence Feature
 **Step 1:** Get 20-dimensional amino acid composition 
 
        CalculateAAC(self,ProteinAdderss):
