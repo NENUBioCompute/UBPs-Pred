@@ -1,7 +1,7 @@
 # UBPs-Pred
 ---
 ## Abstract
-  Ubiquinone is an important cofactor that plays vital and diverse roles in many biological processes. Ubiquinone-binding proteins (UBPs) are receptor proteins that are docking with ubiquinones. Analyzing and identifying UBPs by computational approach will provide insights into the pathway associated with ubiquinones. In this work, we firstly proposed an UBPs predictor (UBPs-Pred), the optimal feature subset selected from three categories of sequence-derived features was fed into the extreme gradient boosting (XGBoost) classifier, and the parameter of the XGBoost was tuned by multi-objective particle swarm optimization (MOPSO). The experimental results over the independent validation demonstrated the considerable prediction performance with the Matthews correlation coefficient (MCC) of 0.517. After that, we analyzed the UBPs by using bioinformatics ways, including the statistics of binding domains and the protein distribution, and the enrichment analysis of Gene Ontology (GO) and KEGG pathway.
+  Ubiquinone is an important cofactor that plays vital and diverse roles in many biological processes. Ubiquinone-binding proteins (UBPs) are receptor proteins that are docking with ubiquinones. Analyzing and identifying UBPs by computational approach will provide insights into the pathway associated with ubiquinones. In this work, we firstly proposed an UBPs predictor (UBPs-Pred), the optimal feature subset selected from three categories of sequence-derived features was fed into the extreme gradient boosting (XGBoost) classifier, and the parameter of the XGBoost was tuned by multi-objective particle swarm optimization (MOPSO). The experimental results over the independent validation demonstrated the considerable prediction performance with the Matthews correlation coefficient (MCC) of 0.517. 
 ## Configuration Tool
 ----------------------
 Download and Install BLAST+
@@ -31,7 +31,7 @@ Download and Install BLAST+
 
        standed_PSSM(self,SimplifyPssm(self,pssmdir,ID),ProteinAdderss):
 ## Input/Output
-       Input: a protein ID.
+       Input: a protein ID(Uniport).
        Output: This protein is UBP/not UBP.
 ## Model flowchart
    ![image](https://github.com/NENUBioCompute/UBPs-Pred/blob/master/image/flowchart.png)
