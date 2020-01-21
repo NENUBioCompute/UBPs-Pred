@@ -34,6 +34,7 @@ Download and Install BLAST+
        Input: a protein ID(Uniport).
        Output: ID is UBP/not UBP.
    **Example:**
+   
        Input: Q9YHT2
        Output: Q9YHT2 is UBP.
 ## Model flowchart
