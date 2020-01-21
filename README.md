@@ -34,3 +34,4 @@ Download and Install BLAST+
        Input: a protein ID.
        Output: This protein is UBP/not UBP.
 ## Model flowchart
+   ![image](https://github.com/NENUBioCompute/UBPs-Pred/blob/master/image/flowchart.png)
