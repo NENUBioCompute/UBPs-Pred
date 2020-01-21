@@ -32,6 +32,6 @@ Download and Install BLAST+
        standed_PSSM(self,SimplifyPssm(self,pssmdir,ID),ProteinAdderss):
 ## Input/Output
        Input: a protein ID(Uniport).
-       Output: This protein is UBP/not UBP.
+       Output: ID is UBP/not UBP.
 ## Model flowchart
    ![image](https://github.com/NENUBioCompute/UBPs-Pred/blob/master/image/flowchart.png)
