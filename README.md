@@ -30,3 +30,7 @@ Download and Install BLAST+
 **Step 3:** Get 400-dimensional standardized PSSM
 
        standed_PSSM(self,SimplifyPssm(self,pssmdir,ID),ProteinAdderss):
+## Input/Output
+       Input: a protein ID.
+       Output: This protein is UBP/not UBP.
+## Model flowchart
