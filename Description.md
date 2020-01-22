@@ -8,7 +8,7 @@ This project includes training and testing. The training code is in the Train fo
 
 ## Configuration Tool
 ----------------------
-Download and Install BLAST+
+Under Linux，download and install BLAST+
 
 **Step 1:**	We used the version "ncbi-blast-2.9.0+", download BLAST+ from:
 
