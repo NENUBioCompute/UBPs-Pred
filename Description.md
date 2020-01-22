@@ -1,7 +1,7 @@
 # UBPs_Predictor
 ---
 ## Abstract
-  Ubiquinone is an important cofactor that plays vital and diverse roles in many biological processes. Ubiquinone-binding proteins (UBPs) are receptor proteins that are docking with ubiquinones. Analyzing and identifying UBPs by computational approach will provide insights into the pathway associated with ubiquinones. In this work, we firstly proposed an UBPs predictor (UBPs-Pred), the optimal feature subset selected from three categories of sequence-derived features was fed into the extreme gradient boosting (XGBoost) classifier.
+  Ubiquinone is an important cofactor that plays vital and diverse roles in many biological processes. Ubiquinone-binding proteins (UBPs) are receptor proteins that are docking with ubiquinones. Analyzing and identifying UBPs by computational approach will provide insights into the pathway associated with ubiquinones. In this work, we firstly proposed an UBPs predictor (UBPs-Pred), the optimal feature subset selected from three categories of sequence-derived features was fed into the extreme gradient boosting (XGBoost) classifier.This work includes training and testing. The training code is in the Train folder. First, the sequence features are extracted, the features are ranked using Importance Ranking.py, and the ranking results are input into IFS.py to find the best-performing feature set. Perform parameter optimization to find the optimal parameter set. The test code is in the Test folder. Enter a protein ID (Uniport) to get the prediction result.
 ## Configuration Tool
 ----------------------
 Download and Install BLAST+
