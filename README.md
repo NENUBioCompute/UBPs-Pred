@@ -31,13 +31,18 @@ Download and Install BLAST+
 
        standed_PSSM(self,SimplifyPssm(self,pssmdir,ID),ProteinAdderss):
 ## IFS
-IFS.py according to the ranks of features importance, one at a time selects the most important features that have not been selected, joins the data set training, and stops until all features are selected
+  IFS.py according to the ranks of features importance, one at a time selects the most important features that have not been selected, joins the data set training, and stops until all features are selected
 
     Input: 
           address:train/test data set
           importance_rank: all features rank
     Output: Each indicator per iteration
-## Input/Output
+## MOPSO
+
+
+  Mopso is an evolutionary technology based on swarm intelligence that simulates social behavior. With its unique search mechanism, excellent convergence performance, and convenient computer implementation, Mopso has been widely used in the field of engineering optimization. Here it is used for parameter optimization. First of all, the initial position and speed are established, and the model can be connected to find the results of global optimal parameters.
+  
+## Input/Output of test
        Input: a protein ID(Uniport).
        Output: ID is UBP/not UBP.
    **Example:**
