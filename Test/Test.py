@@ -262,19 +262,21 @@ if __name__ == '__main__':
     fastapath = address + '/Input/'
     msapath = address + '/msa'
     pssmpath = address + '/psm'
-    ID = ''
-    feature = Feature()
-    feature.GetFasta(address,ID)
-    AAC_20 = feature.CalculateAAC(address)
-    DipeptideComposition_400 = feature.CalculateDipeptideComposition(address)
-    feature.SigleSeq(address,ID,psiblast,db,fastapath,msapath,pssmpath)
-    metrix = feature.SimplifyPssm(address,ID)
-    PSSM_400 = feature.standed_PSSM(metrix,address)
-    Feature1 = []
-    Feature1.append(np.hstack((AAC_20,np.hstack((DipeptideComposition_400,PSSM_400)))))
-    selFeature = feature.Sellection(Feature1,rank)
-    predict = Test()
-    print(ID,predict.Prediction(address,selFeature))
+    IDs = input()
+    ID_list = IDs.split(' ')
+    for ID in ID_list:
+        feature = Feature()
+        feature.GetFasta(address,ID)
+        AAC_20 = feature.CalculateAAC(address)
+        DipeptideComposition_400 = feature.CalculateDipeptideComposition(address)
+        feature.SigleSeq(address,ID,psiblast,db,fastapath,msapath,pssmpath)
+        metrix = feature.SimplifyPssm(address,ID)
+        PSSM_400 = feature.standed_PSSM(metrix,address)
+        Feature1 = []
+        Feature1.append(np.hstack((AAC_20,np.hstack((DipeptideComposition_400,PSSM_400)))))
+        selFeature = feature.Sellection(Feature1,rank)
+        predict = Test()
+        print(ID,predict.Prediction(address,selFeature))
 
 
 
