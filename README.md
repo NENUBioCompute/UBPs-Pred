@@ -30,6 +30,13 @@ Download and Install BLAST+
 **Step 3:** Get 400-dimensional standardized PSSM
 
        standed_PSSM(self,SimplifyPssm(self,pssmdir,ID),ProteinAdderss):
+## IFS
+IFS.py according to the ranks of features importance, one at a time selects the most important features that have not been selected, joins the data set training, and stops until all features are selected
+
+    Input: 
+          address:train/test data set
+          importance_rank: all features rank
+    Output: Each indicator per iteration
 ## Input/Output
        Input: a protein ID(Uniport).
        Output: ID is UBP/not UBP.
