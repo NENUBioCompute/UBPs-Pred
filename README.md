@@ -42,7 +42,8 @@ Download and Install BLAST+
 
   Mopso is an evolutionary technology based on swarm intelligence that simulates social behavior. With its unique search mechanism, excellent convergence performance, and convenient computer implementation, Mopso has been widely used in the field of engineering optimization. Here it is used for parameter optimization. First of all, the initial position and speed are established, and the model can be connected to find the results of global optimal parameters.
   
-## Input/Output of test
+## test
+Test.py is an integrated code that includes feature extraction and selection, and predicts whether a protein is ubiquinone.
        Input: a protein ID(Uniport).
        Output: ID is UBP/not UBP.
    **Example:**
