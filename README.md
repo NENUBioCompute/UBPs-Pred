@@ -46,6 +46,7 @@ Download and Install BLAST+
 Test.py is an integrated code that includes feature extraction and selection, and predicts whether a protein is ubiquinone.
 
    **Example:**
+   
        Input: Q9YHT2
        Output: Q9YHT2 is UBP.
 ## Model flowchart
