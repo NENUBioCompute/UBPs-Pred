@@ -49,15 +49,16 @@ Under Linux，download and install BLAST+
 ## test
 Test.py is an integrated code that includes feature extraction and selection, and predicts whether a protein is ubiquinone.
 
-   **Single Input Example:**
+   **Input Example:**
    
        Input: Q9YHT2
+              MAAAVVGVSLRRGVPARFLRAGLRPVRGLEAVHGICRGAQTAAAATSRIKKFSIYRWDPD
+              KPGDKPRMQTYEVDLNKCGPMVLDALIKIKNELDSTLTFRRSCREGICGSCAMNIAGGNT
+              LACTKKIDPDLSKTTKIYPLPHMYVVKDLVPDLSNFYAQYKSIEPYLKKKDESKQGKEQY
+              LQSIEDRQKLDGLYECILCACCSTSCPSYWWNGDKYLGPAVLMQAYRWMIDSRDDYTEER
+              LAQLQDPFSLYRCHTIMNCTRTCPKGLNPGKAIAEIKKMMATYKEKAAAA
        Output: Q9YHT2 is UBP.
-   **Multiple Input Example:**
-   
-       Input: Q9YHT2 D0VWW3
-       Output: Q9YHT2 is UBP.
-               D0VWW3 is UBP.
+
 ## Model flowchart
    ![image](https://github.com/NENUBioCompute/UBPs-Pred/blob/master/image/flowchart.png)
 
