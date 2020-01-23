@@ -25,7 +25,7 @@ class Feature():
         ########################################################################
         """
         fasta_file  = open(address+"/Input/"+ID+'.fasta','w')
-        sequence = '>'+ID+'\n'+sequence
+        sequence = ID+'\n'+sequence
         fasta_file.write(sequence)
 
     def CalculateAAC(self,ProteinAdderss):
