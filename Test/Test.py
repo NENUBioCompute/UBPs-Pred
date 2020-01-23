@@ -14,22 +14,19 @@ class Feature():
     then select the most important 242-dimensional feature
     ########################################################################
     """
-    def GetFasta(self,address,ID):
+    def GetFasta(self,address,ID,sequence):
         """
         ########################################################################
         get a protein fasta
         Usage:
-        Input: protein ID.
+        Input: protein ID,protein sequence.
         result=GetFasta(self,address,ID)
         Output: a fasta file
         ########################################################################
         """
         fasta_file  = open(address+"/Input/"+ID+'.fasta','w')
-        baseUrl = "http://www.uniprot.org/uniprot/"
-        currentUrl = baseUrl + ID + ".fasta"
-        response = r.post(currentUrl)
-        cData = ''.join(response.text)
-        fasta_file.write(cData)
+        sequence = '>'+ID+'\n'+sequence
+        fasta_file.write(sequence)
 
     def CalculateAAC(self,ProteinAdderss):
         """
@@ -263,20 +260,22 @@ if __name__ == '__main__':
     msapath = address + '/msa'
     pssmpath = address + '/psm'
     IDs = input()
-    ID_list = IDs.split(' ')
-    for ID in ID_list:
-        feature = Feature()
-        feature.GetFasta(address,ID)
-        AAC_20 = feature.CalculateAAC(address)
-        DipeptideComposition_400 = feature.CalculateDipeptideComposition(address)
-        feature.SigleSeq(address,ID,psiblast,db,fastapath,msapath,pssmpath)
-        metrix = feature.SimplifyPssm(address,ID)
-        PSSM_400 = feature.standed_PSSM(metrix,address)
-        Feature1 = []
-        Feature1.append(np.hstack((AAC_20,np.hstack((DipeptideComposition_400,PSSM_400)))))
-        selFeature = feature.Sellection(Feature1,rank)
-        predict = Test()
-        print(ID,predict.Prediction(address,selFeature))
+    stopword = ''
+    sequence = ''
+    for line in iter(input,stopword):
+        sequence+=line
+    feature = Feature()
+    feature.GetFasta(address,ID,sequence)
+    AAC_20 = feature.CalculateAAC(address)
+    DipeptideComposition_400 = feature.CalculateDipeptideComposition(address)
+    feature.SigleSeq(address,ID,psiblast,db,fastapath,msapath,pssmpath)
+    metrix = feature.SimplifyPssm(address,ID)
+    PSSM_400 = feature.standed_PSSM(metrix,address)
+    Feature1 = []
+    Feature1.append(np.hstack((AAC_20,np.hstack((DipeptideComposition_400,PSSM_400)))))
+    selFeature = feature.Sellection(Feature1,rank)
+    predict = Test()
+    print(ID,predict.Prediction(address,selFeature))
 
 
 
